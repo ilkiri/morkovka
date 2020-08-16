@@ -1,0 +1,24 @@
+{
+  "name": "morkovka",
+  "version": "0.0.1",
+  "description": "CSS library",
+  "author": "Ilya Kirillov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilkiri/morkovka.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "bem"
+  ],
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0"
+  }
+}
