@@ -1,0 +1,12 @@
+@mixin control {
+  position: realative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: $control-height;
+  padding: $control-padding-v $control-padding-h;
+  font-size: $font-size;
+  font-family: inherit;
+  border: $border;
+  border-radius: $border-radius;
+}

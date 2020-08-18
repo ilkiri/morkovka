@@ -1,0 +1,10 @@
+.button {
+  @include control;
+  background-color: $button-background-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: darken($button-background-color, 3%);
+  }
+}
