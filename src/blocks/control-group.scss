@@ -1,16 +1,16 @@
 .control-group {
   display: flex;
 
-  > .button {
-    &:not(:first-child) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      margin-left: -$border-width;
-    }
+  > .button:not(:first-child),
+  > .text-input:not(:first-child) .text-input__native-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -$border-width;
+  }
 
-    &:not(:last-child) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+  > .button:not(:last-child),
+  > .text-input:not(:last-child) .text-input__native-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
