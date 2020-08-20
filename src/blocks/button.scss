@@ -1,5 +1,8 @@
 .button {
   @include control;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background-color: $button-background-color;
   cursor: pointer;
 

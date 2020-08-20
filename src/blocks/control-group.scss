@@ -2,10 +2,14 @@
   display: flex;
 
   > .button:not(:first-child),
+  > .text-input:not(:first-child) {
+    margin-left: -$border-width;
+  }
+
+  > .button:not(:first-child),
   > .text-input:not(:first-child) .text-input__native-control {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    margin-left: -$border-width;
   }
 
   > .button:not(:last-child),

@@ -1,8 +1,6 @@
 @mixin control {
-  position: realative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  display: block;
   height: $control-height;
   padding: $control-padding-v $control-padding-h;
   font-size: $font-size;

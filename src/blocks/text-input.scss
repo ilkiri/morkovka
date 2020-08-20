@@ -1,5 +1,10 @@
 .text-input {
+  position: relative;
+  display: block;
+  flex: 1;
+
   &__native-control {
     @include control;
+    width: 100%;
   }
 }
