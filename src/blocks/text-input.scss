@@ -2,9 +2,33 @@
   position: relative;
   display: block;
   flex: 1;
+  cursor: text;
 
   &__native-control {
     @include control;
     width: 100%;
+  }
+
+  &--has-leading-icon &__native-control {
+    padding-left: $control-height;
+  }
+
+  &--has-trailing-icon &__native-control {
+    padding-right: $control-height;
+  }
+
+  &--has-leading-icon .icon,
+  &--has-trailing-icon .icon {
+    position: absolute;
+    top: 0;
+    margin: calc(#{$control-height - $icon-size} / 2);
+  }
+
+  &--has-leading-icon .icon {
+    left: 0;
+  }
+
+  &--has-trailing-icon .icon {
+    right: 0;
   }
 }
