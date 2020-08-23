@@ -6,8 +6,11 @@ $border: $border-width solid $border-color;
 
 $border-radius: rem(3px);
 
-$control-height: rem(36px);
+$control-height: rem(32px);
 $control-padding-v: rem(4px);
 $control-padding-h: rem(12px);
 
 $button-background-color: hsl(0, 0, 95%);
+
+$icon-size: rem(20px);
+$icon-color: hsl(0, 0, 90%);
