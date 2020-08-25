@@ -1,0 +1,27 @@
+.select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: $icon-size;
+    height: $icon-size;
+    margin: calc(#{$control-height - $icon-size} / 2);
+    background-image: svg-load("svg/arrow-down.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  &__native-control {
+    @include control;
+    padding-right: $control-height;
+    appearance: none;
+    cursor: pointer;
+  }
+}
