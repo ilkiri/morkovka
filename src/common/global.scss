@@ -7,3 +7,13 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+body {
+  font-family: $font-family;
+}
+
+@-moz-document url-prefix() {
+  select {
+    text-indent: -2px;
+  }
+}
