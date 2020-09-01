@@ -17,11 +17,14 @@
     padding-right: $control-height;
   }
 
-  &--has-leading-icon .icon,
-  &--has-trailing-icon .icon {
-    position: absolute;
-    top: 0;
-    margin: calc(#{$control-height - $icon-size} / 2);
+  &--has-leading-icon,
+  &--has-trailing-icon {
+
+    .icon {
+      position: absolute;
+      top: 0;
+      margin: calc(#{$control-height - $icon-size} / 2);  
+    }
   }
 
   &--has-leading-icon .icon {
