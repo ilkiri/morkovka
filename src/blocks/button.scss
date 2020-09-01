@@ -10,4 +10,34 @@
   &:focus {
     background-color: darken($button-background-color, 3%);
   }
+
+  &--icon-only,
+  &--has-leading-icon,
+  &--has-trailing-icon {
+
+    .icon {
+      position: absolute;
+      top: -$border-width;
+      left: -$border-width;
+      margin: calc(#{$control-height - $icon-size} / 2);
+    }
+  }
+
+  &--icon-only {
+    width: $control-height;
+    padding: 0;
+  }
+
+  &--has-leading-icon {
+    padding-left: $control-height;
+  }
+
+  &--has-trailing-icon {
+    padding-right: $control-height;
+    
+    .icon {
+      left: auto;
+      right: -$border-width;
+    }
+  }
 }
