@@ -18,7 +18,7 @@
     pointer-events: none;
   }
 
-  &__native-control {
+  &__control {
     @include control;
     padding-right: $control-height;
     appearance: none;

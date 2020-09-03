@@ -4,16 +4,16 @@
   flex: 1;
   cursor: text;
 
-  &__native-control {
+  &__control {
     @include control;
     width: 100%;
   }
 
-  &--has-leading-icon &__native-control {
+  &--has-leading-icon &__control {
     padding-left: $control-height;
   }
 
-  &--has-trailing-icon &__native-control {
+  &--has-trailing-icon &__control {
     padding-right: $control-height;
   }
 

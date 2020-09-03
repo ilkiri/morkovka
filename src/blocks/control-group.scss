@@ -8,15 +8,15 @@
   }
 
   > .button:not(:first-child),
-  > .text-input:not(:first-child) .text-input__native-control,
-  > .select:not(:first-child) .select__native-control {
+  > .text-input:not(:first-child) .text-input__control,
+  > .select:not(:first-child) .select__control {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
   > .button:not(:last-child),
-  > .text-input:not(:last-child) .text-input__native-control,
-  > .select:not(:last-child) .select__native-control {
+  > .text-input:not(:last-child) .text-input__control,
+  > .select:not(:last-child) .select__control {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
