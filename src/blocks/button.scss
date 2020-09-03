@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   background-color: $button-background-color;
+  user-select: none;
   cursor: pointer;
 
   &:hover,
@@ -11,33 +12,18 @@
     background-color: darken($button-background-color, 3%);
   }
 
-  &--icon-only,
-  &--has-leading-icon,
-  &--has-trailing-icon {
-
-    .icon {
-      position: absolute;
-      top: -$border-width;
-      left: -$border-width;
-      margin: calc(#{$control-height - $icon-size} / 2);
-    }
-  }
-
   &--icon-only {
     width: $control-height;
     padding: 0;
   }
 
-  &--has-leading-icon {
-    padding-left: $control-height;
-  }
+  &--has-leading-icon .icon {
+    margin-right: $control-padding-h / 2;
+    margin-left: -$control-padding-h / 2; 
+  } 
 
-  &--has-trailing-icon {
-    padding-right: $control-height;
-    
-    .icon {
-      left: auto;
-      right: -$border-width;
-    }
+  &--has-trailing-icon .icon { 
+    margin-right: -$control-padding-h / 2; 
+    margin-left: $control-padding-h / 2;
   }
 }
