@@ -1,32 +1,11 @@
 .checkbox {
-  position: relative;
-  display: inline-flex;
-  cursor: pointer;
+  @include checkbox-radio;
 
-  &__native-control {
-    @include visually-hidden;
-    top: 0;
-    left: 0;
+  &__indicator {
+    border-radius: rem(2px);
   }
 
-  &__control {
-    display: block;
-    width: $checkbox-size;
-    height: $checkbox-size;
-    margin-right: rem(8px);
-    border: $border;
-    
-    &::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__native-control:checked ~ &__control::before {
+  &__control:checked ~ &__indicator::before {
     background-image: svg-load("svg/check.svg");
   }
 }
