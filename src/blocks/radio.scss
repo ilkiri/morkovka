@@ -1,0 +1,11 @@
+.radio {
+  @include checkbox-radio;
+
+  &__indicator {
+    border-radius: 50%;
+  }
+
+  &__control:checked ~ &__indicator::before {
+    background-image: svg-load("svg/radio.svg");
+  }
+}
