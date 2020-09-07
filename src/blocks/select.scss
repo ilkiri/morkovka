@@ -13,7 +13,7 @@
     width: $icon-size;
     height: $icon-size;
     margin: calc(#{$control-height - $icon-size} / 2);
-    background-image: svg-load("svg/arrow-down.svg");
+    background-image: svg-load("svg/arrow-down.svg", fill = $text-color);
     background-size: 100%;
     background-repeat: no-repeat;
     pointer-events: none;

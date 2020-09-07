@@ -10,6 +10,6 @@
   }
 
   &__control:checked ~ &__indicator::before {
-    background-image: svg-load("svg/check.svg");
+    background-image: svg-load("svg/check.svg", fill = $text-color);
   }
 }
