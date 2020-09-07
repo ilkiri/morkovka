@@ -1,6 +1,9 @@
+$grey: hsl(0, 0, 24);
 $white: hsl(0, 0, 100);
 
 $primary: hsl(20, 90, 55);
+
+$text-color: $grey;
 
 $font-size: rem(14px);
 $font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
@@ -14,8 +17,6 @@ $border-radius: rem(3px);
 $control-height: rem(32px);
 $control-padding-v: rem(4px);
 $control-padding-h: rem(12px);
-
-$button-background-color: hsl(0, 0, 95%);
 
 $checkbox-radio-size: rem(18px);
 
