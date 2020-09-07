@@ -12,6 +12,17 @@
     background-color: darken($button-background-color, 3%);
   }
 
+  &--primary {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($primary, 5%);
+    }
+  }
+
   &--icon-only {
     width: $control-height;
     padding: 0;
