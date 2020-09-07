@@ -3,19 +3,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: $button-background-color;
   user-select: none;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    background-color: darken($button-background-color, 3%);
-  }
 
   &--primary {
     color: $white;
     background-color: $primary;
-    border-color: $primary;
+    border-width: 0;
 
     &:hover,
     &:focus {

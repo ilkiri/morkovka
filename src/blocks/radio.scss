@@ -5,6 +5,10 @@
     border-radius: 50%;
   }
 
+  &__control:focus ~ &__indicator {
+    @include control-focused;
+  }
+
   &__control:checked ~ &__indicator::before {
     background-image: svg-load("svg/radio.svg");
   }

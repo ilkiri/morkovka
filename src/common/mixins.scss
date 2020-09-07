@@ -15,6 +15,17 @@
   background-color: $white;
   border: $border;
   border-radius: $border-radius;
+
+  &:hover,
+  &:focus {
+    z-index: 10;
+    border-color: darken($border-color, 10);
+  }
+
+  &:focus {
+    @include control-focused;
+    z-index: 20;
+  }
 }
 
 @mixin checkbox-radio {

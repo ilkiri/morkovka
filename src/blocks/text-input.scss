@@ -7,6 +7,11 @@
   &__control {
     @include control;
     width: 100%;
+
+    &:focus {
+      @include control-focused;
+      z-index: 20;
+    }
   }
 
   &--has-leading-icon &__control {
