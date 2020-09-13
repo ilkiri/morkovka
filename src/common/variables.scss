@@ -1,9 +1,18 @@
-$grey: hsl(0, 0, 24);
-$white: hsl(0, 0, 100);
+$grey-900: hsl(0, 0, 11%) !default;
+$grey-800: hsl(0, 0, 24%) !default;
+$grey-700: hsl(0, 0, 37%) !default;
+$grey-600: hsl(0, 0, 50%) !default;
+$grey-500: hsl(0, 0, 63%) !default;
+$grey-400: hsl(0, 0, 76%) !default;
+$grey-300: hsl(0, 0, 83%) !default;
+$grey-200: hsl(0, 0, 90%) !default;
+$grey-100: hsl(0, 0, 95%) !default;
+$grey-50: hsl(0, 0, 97%) !default;
+$white: hsl(0, 0, 100%) !default;
 
-$primary: hsl(20, 90, 55);
+$primary: hsl(15, 90, 60) !default;
 
-$text-color: $grey;
+$text-color: $grey-800;
 
 $font-size: rem(14px);
 $font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
