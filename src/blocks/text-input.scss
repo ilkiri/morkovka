@@ -14,6 +14,10 @@
     }
   }
 
+  &--small &__control {
+    @include control-small;
+  }
+
   &--has-leading-icon &__control {
     padding-left: $control-height;
   }
@@ -26,6 +30,7 @@
   &--has-trailing-icon {
 
     .icon {
+      z-index: 100;
       position: absolute;
       top: 0;
       margin: calc(#{$control-height - $icon-size} / 2);  
@@ -38,5 +43,21 @@
 
   &--has-trailing-icon .icon {
     right: 0;
+  }
+
+  &--small#{&}--has-leading-icon &__control {
+    padding-left: $control-height-sm;
+  }
+
+  &--small#{&}--has-trailing-icon &__control {
+    padding-right: $control-height-sm;
+  }
+
+  &--small#{&}--has-leading-icon,
+  &--small#{&}--has-trailing-icon {
+
+    .icon {
+      margin: calc(#{$control-height-sm - $icon-size} / 2); 
+    }
   }
 }

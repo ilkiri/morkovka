@@ -9,15 +9,14 @@
   display: block;
   height: $control-height;
   padding: $control-padding-v $control-padding-h;
-  font-size: $font-size;
-  font-family: inherit;
+  font-size: $control-font-size;
+  font-family: $font-family;
   color: $text-color;
   background-color: $white;
   border: $border;
   border-radius: $border-radius;
 
-  &:hover,
-  &:focus {
+  &:hover {
     z-index: 10;
     border-color: darken($border-color, 10);
   }
@@ -26,6 +25,12 @@
     @include control-focused;
     z-index: 20;
   }
+}
+
+@mixin control-small {
+  height: $control-height-sm;
+  padding: $control-padding-v-sm $control-padding-h-sm;
+  font-size: $control-font-size-sm;
 }
 
 @mixin checkbox-radio {
@@ -44,6 +49,7 @@
     height: $checkbox-radio-size;
     border: $border;
     margin-right: rem(8px);
+    background-color: $checkbox-radio-background-color;
 
     &::before {
       content: "";
@@ -53,6 +59,20 @@
       background-size: 100%;
       background-repeat: no-repeat;
     }
+  }
+
+  &__control:hover ~ &__indicator {
+    border-color: darken($border-color, 10); 
+  }
+
+  &__control:checked ~ &__indicator {
+    background-color: $checkbox-radio-background-color-active;
+    border-color: transparent;
+  }
+
+  &__control:checked:hover ~ &__indicator,
+  &__control:checked:focus ~ &__indicator {
+    background-color: lighten($checkbox-radio-background-color-active, 5%);
   }
 }
 

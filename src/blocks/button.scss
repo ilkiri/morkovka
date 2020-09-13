@@ -17,6 +17,10 @@
     }
   }
 
+  &--small {
+    @include control-small;
+  }
+
   &--icon-only {
     width: $control-height;
     padding: 0;
@@ -30,5 +34,19 @@
   &--has-trailing-icon .icon { 
     margin-right: -$control-padding-h / 2; 
     margin-left: $control-padding-h / 2;
+  }
+
+  &--small#{&}--icon-only {
+    width: $control-height-sm;
+  }
+
+  &--small#{&}--has-leading-icon .icon {
+    margin-right: $control-padding-h-sm / 2; 
+    margin-left: -$control-padding-h-sm / 2;
+  }
+
+  &--small#{&}--has-trailing-icon .icon {
+    margin-right: -$control-padding-h-sm / 2;
+    margin-left: $control-padding-h-sm / 2;
   }
 }

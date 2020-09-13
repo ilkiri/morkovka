@@ -26,13 +26,20 @@ $border-radius: rem(3px);
 $control-height: rem(32px);
 $control-padding-v: rem(4px);
 $control-padding-h: rem(12px);
+$control-font-size: $font-size;
+
+$control-height-sm: rem(24px);
+$control-padding-v-sm: rem(2px);
+$control-padding-h-sm: rem(8px);
+$control-font-size-sm: rem(13px);
 
 $checkbox-radio-size: rem(18px);
+$checkbox-radio-background-color: $white;
+$checkbox-radio-background-color-active: $primary;
 
 $switch-width: rem(32px);
 $switch-height: $checkbox-radio-size;
 $switch-background-color: $grey-300;
 $switch-background-color-active: $primary;
 
-$icon-size: rem(20px);
-$icon-color: rgba(0, 0, 0, 0.1);
+$icon-size: rem(16px);  

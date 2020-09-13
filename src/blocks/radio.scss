@@ -10,6 +10,6 @@
   }
 
   &__control:checked ~ &__indicator::before {
-    background-image: svg-load("svg/radio.svg", fill = $text-color);
+    background-image: svg-load("svg/radio.svg", fill = $checkbox-radio-background-color);
   }
 }
