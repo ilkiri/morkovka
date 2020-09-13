@@ -1,0 +1,42 @@
+.switch {
+  display: inline-flex;
+  align-items: center;
+  line-height: $switch-height;
+  cursor: pointer;
+
+  &__control {
+    @include visually-hidden;
+  }
+
+  &__indicator {
+    position: relative;
+    display: Inline-block;
+    width: $switch-width;
+    height: $switch-height;
+    margin-top: -1px;
+    margin-right: rem(8px);
+    background-color: $switch-background-color;
+    border-radius: $switch-height / 2; 
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: $switch-height - rem(4px);
+      height: $switch-height - rem(4px);
+      margin: rem(2px);
+      background-color: $white;  
+      border-radius: 50%; 
+    } 
+  }
+ 
+  &__control:checked ~ &__indicator {
+    background-color: $switch-background-color-active;
+
+    &::before {
+      left: calc(100% - #{$switch-height});  
+    }
+  }
+}

@@ -29,5 +29,10 @@ $control-padding-h: rem(12px);
 
 $checkbox-radio-size: rem(18px);
 
+$switch-width: rem(32px);
+$switch-height: $checkbox-radio-size;
+$switch-background-color: $grey-300;
+$switch-background-color-active: $primary;
+
 $icon-size: rem(20px);
 $icon-color: rgba(0, 0, 0, 0.1);
