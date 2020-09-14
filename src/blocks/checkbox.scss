@@ -5,10 +5,6 @@
     border-radius: rem(2px);
   }
 
-  &__control:focus ~ &__indicator {
-    @include control-focused;
-  }
-
   &__control:checked ~ &__indicator::before {
     background-image: svg-load("svg/check.svg", fill = $checkbox-radio-background-color);
   }

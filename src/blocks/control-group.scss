@@ -3,20 +3,26 @@
 
   > .button:not(:first-child),
   > .text-input:not(:first-child),
-  > .select:not(:first-child) {
+  > .select:not(:first-child),
+  > .checkbox.checkbox--as-button:not(:first-child),
+  > .radio.radio--as-button:not(:first-child) {
     margin-left: -$border-width;
   }
 
   > .button:not(:first-child),
   > .text-input:not(:first-child) .text-input__control,
-  > .select:not(:first-child) .select__control {
+  > .select:not(:first-child) .select__control,
+  > .checkbox.checkbox--as-button:not(:first-child) .button,
+  > .radio.radio--as-button:not(:first-child) .button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
   > .button:not(:last-child),
   > .text-input:not(:last-child) .text-input__control,
-  > .select:not(:last-child) .select__control {
+  > .select:not(:last-child) .select__control,
+  > .checkbox.checkbox--as-button:not(:last-child) .button,
+  > .radio.radio--as-button:not(:last-child) .button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }

@@ -34,6 +34,7 @@
 }
 
 @mixin checkbox-radio {
+  position: relative;
   display: inline-flex;
   cursor: pointer;
 
@@ -65,6 +66,10 @@
     border-color: darken($border-color, 10); 
   }
 
+  &__control:focus ~ &__indicator, {
+    @include control-focused;
+  }
+
   &__control:checked ~ &__indicator {
     background-color: $checkbox-radio-background-color-active;
     border-color: transparent;
@@ -73,6 +78,15 @@
   &__control:checked:hover ~ &__indicator,
   &__control:checked:focus ~ &__indicator {
     background-color: lighten($checkbox-radio-background-color-active, 5%);
+  }
+
+  &--as-button &__control:focus ~ .button {
+    @include control-focused;
+    z-index: 20;
+  }
+
+  &--as-button &__control:checked ~ .button {
+    background-color: rgba($primary, 0.1);
   }
 }
 
