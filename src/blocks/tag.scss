@@ -1,0 +1,11 @@
+.tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: rem(20px);
+  padding: 0 rem(8px);
+  font-size: rem(13px);
+  color: $white;
+  background-color: $grey-700;
+  border-radius: 3px;
+}
