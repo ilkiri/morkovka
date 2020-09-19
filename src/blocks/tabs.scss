@@ -1,0 +1,33 @@
+.tabs {
+
+  &__tab-group {
+    display: flex;
+    margin-bottom: rem(12px); 
+    border-bottom: $border;
+  }
+
+  &__tab {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(40px);
+    padding: $control-padding-v $control-padding-h;
+    color: $grey-600;
+    font-size: $font-size;
+    font-family: $font-family;
+    background-color: $white;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    user-select: none;
+    cursor: pointer;
+
+    &.is-active {
+      color: $text-color;
+      border-bottom-color: $primary;
+    }
+  }
+
+  &__panel {
+
+  }
+}
