@@ -1,0 +1,33 @@
+.menu {
+  min-width: 180px;
+  padding: rem(8px) 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: $border;
+  border-radius: $border-radius;
+  list-style: none;
+  
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: $control-height;
+    padding: $control-padding-v $control-padding-h;
+    color: $text-color;
+    font-size: $font-size;
+    font-family: $font-family;
+    background-color: $white;
+    border: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $grey-100;
+    }
+  }
+
+  &__divider {
+    margin: $control-padding-h / 2;
+    border-top: $border;
+  }
+}
