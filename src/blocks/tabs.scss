@@ -2,7 +2,6 @@
 
   &__tab-group {
     display: flex;
-    margin-bottom: rem(12px); 
     border-bottom: $border;
   }
 
@@ -12,7 +11,7 @@
     align-items: center;
     height: rem(40px);
     padding: $control-padding-v $control-padding-h;
-    color: $grey-600;
+    color: $text-color;
     font-size: $font-size;
     font-family: $font-family;
     background-color: $white;
@@ -21,13 +20,17 @@
     user-select: none;
     cursor: pointer;
 
+    &:hover { 
+      color: $primary;
+    }
+
     &.is-active {
-      color: $text-color;
+      color: $primary;
       border-bottom-color: $primary;
     }
   }
 
   &__panel {
-
+    padding-top: rem(12px);
   }
 }
