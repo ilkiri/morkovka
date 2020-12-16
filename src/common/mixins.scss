@@ -1,36 +1,39 @@
-@mixin control-focused($color: $primary) {
-  outline: 0;
-  border-color: lighten($color, 10%);
-  box-shadow: 0 0 2px 2px rgba($color, 0.3);
-}
-
 @mixin control {
   position: relative;
-  display: block;
+  display: inline-block;
   height: $control-height;
-  padding: $control-padding-v $control-padding-h;
+  padding: $control-padding-y $control-padding-x;
   font-size: $control-font-size;
   font-family: $font-family;
+  line-height: 1.5;
   color: $text-color;
   background-color: $white;
   border: $border;
   border-radius: $border-radius;
-
-  &:hover {
-    z-index: 10;
-    border-color: darken($border-color, 10);
-  }
-
-  &:focus {
-    @include control-focused;
-    z-index: 20;
-  }
 }
 
 @mixin control-small {
   height: $control-height-sm;
-  padding: $control-padding-v-sm $control-padding-h-sm;
+  padding: $control-padding-y-sm $control-padding-x-sm;
   font-size: $control-font-size-sm;
+}
+
+@mixin control-hovered() {
+  z-index: $control-z-index-hovered;
+  border-color: darken($border-color, 10%);
+}
+
+@mixin control-focused($base-color: $primary) {
+  z-index: $control-z-index-focused;
+  border-color: $base-color;
+  box-shadow: 0 0 2px 2px rgba($base-color, 0.3);
+  outline: 0;
+}
+
+@mixin control-disabled() {
+  color: $grey-600;
+  background-color: $grey-200;
+  cursor: not-allowed;
 }
 
 @mixin checkbox-radio {
@@ -62,11 +65,15 @@
     }
   }
 
-  &__control:hover ~ &__indicator {
-    border-color: darken($border-color, 10); 
+  &__text {
+    padding: 0 rem(8px);
   }
 
-  &__control:focus ~ &__indicator, {
+  &__control:hover ~ &__indicator {
+    @include control-hovered;
+  }
+
+  &__control:focus ~ &__indicator {
     @include control-focused;
   }
 
@@ -82,11 +89,14 @@
 
   &--as-button &__control:focus ~ .button {
     @include control-focused;
-    z-index: 20;
   }
 
   &--as-button &__control:checked ~ .button {
     background-color: rgba($primary, 0.1);
+  }
+
+  &--as-button &__control:disabled ~ .button {
+    @include control-disabled; 
   }
 }
 
