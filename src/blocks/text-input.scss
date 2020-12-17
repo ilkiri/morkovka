@@ -8,9 +8,16 @@
     @include control;
     width: 100%;
 
+    &:hover {
+      @include control-hovered;
+    }
+
     &:focus {
       @include control-focused;
-      z-index: 20;
+    }
+
+    &:disabled {
+      @include control-disabled;
     }
   }
 
@@ -38,11 +45,11 @@
   }
 
   &--has-leading-icon .icon {
-    left: 0;
+    left: $border-width;
   }
 
   &--has-trailing-icon .icon {
-    right: 0;
+    right: $border-width;
   }
 
   &--small#{&}--has-leading-icon &__control {
