@@ -3,17 +3,33 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   user-select: none;
   cursor: pointer;
 
-  &--primary {
-    color: $white;
-    background-color: $primary;
-    border-width: 0;
+  &:hover {
+    @include control-hovered;
+  }
 
-    &:hover,
-    &:focus {
-      background-color: lighten($primary, 5%);
+  &:focus { 
+    @include control-focused; 
+  }
+
+  &:disabled {
+    @include control-disabled;
+  }
+
+  &:not(:disabled) {
+    
+    &--primary {
+      color: $white;
+      background-color: $primary;
+      border-width: 0;
+  
+      &:hover,
+      &:focus {
+        background-color: lighten($primary, 5%);
+      }
     }
   }
 
@@ -21,32 +37,32 @@
     @include control-small;
   }
 
-  &--icon-only {
+  &--has-icon-only {
     width: $control-height;
-    padding: 0;
+    padding: $control-padding-y;
   }
 
   &--has-leading-icon .icon {
-    margin-right: $control-padding-h / 2;
-    margin-left: -$control-padding-h / 2; 
+    margin-right: $control-padding-x * 2 / 3;
+    margin-left: -$control-padding-x / 3; 
   } 
 
   &--has-trailing-icon .icon { 
-    margin-right: -$control-padding-h / 2; 
-    margin-left: $control-padding-h / 2;
+    margin-right: -$control-padding-x / 3; 
+    margin-left: $control-padding-x * 2 / 3;
   }
 
-  &--small#{&}--icon-only {
+  &--small#{&}--has-icon-only {
     width: $control-height-sm;
   }
 
   &--small#{&}--has-leading-icon .icon {
-    margin-right: $control-padding-h-sm / 2; 
-    margin-left: -$control-padding-h-sm / 2;
+    margin-right: $control-padding-x-sm * 2 / 3; 
+    margin-left: -$control-padding-x-sm / 3;
   }
 
   &--small#{&}--has-trailing-icon .icon {
-    margin-right: -$control-padding-h-sm / 2;
-    margin-left: $control-padding-h-sm / 2;
+    margin-right: -$control-padding-x-sm / 3;
+    margin-left: $control-padding-x-sm * 2 / 3;
   }
 }
