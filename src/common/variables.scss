@@ -23,25 +23,32 @@ $border: $border-width solid $border-color;
 
 $border-radius: rem(3px);
 
+$spacing-1: rem(2px);
+$spacing-2: rem(4px);
+$spacing-3: rem(8px);
+$spacing-4: rem(12px);
+$spacing-5: rem(16px);
+
 $control-z-index-hovered: 20;
 $control-z-index-focused: 30;
 
 $control-height: rem(32px);
-$control-padding-y: rem(4px);
-$control-padding-x: rem(12px);
+$control-padding-y: $spacing-2;
+$control-padding-x: $spacing-4;
 $control-font-size: $font-size;
 
 $control-height-sm: rem(24px);
-$control-padding-y-sm: rem(2px);
-$control-padding-x-sm: rem(8px);
+$control-padding-y-sm: $spacing-1;
+$control-padding-x-sm: $spacing-3;
 $control-font-size-sm: $control-font-size * 0.925;
 
 $checkbox-radio-size: rem(18px);
 $checkbox-radio-background-color: $white;
 $checkbox-radio-background-color-active: $primary;
 
-$switch-width: rem(32px);
-$switch-height: $checkbox-radio-size;
+$switch-width: rem(36px);
+$switch-height: rem(18px);
+$switch-indicator-size: $switch-height - rem(4px);
 $switch-background-color: $grey-300;
 $switch-background-color-active: $primary;
 

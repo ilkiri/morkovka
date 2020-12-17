@@ -4,8 +4,14 @@
   line-height: $switch-height;
   cursor: pointer;
 
+  &:active &__indicator::before {
+    width: $switch-indicator-size * 4 / 3;
+  }
+
   &__control {
     @include visually-hidden;
+    top: 0;
+    left: 0;
   }
 
   &__indicator {
@@ -13,22 +19,22 @@
     display: Inline-block;
     width: $switch-width;
     height: $switch-height;
-    margin-top: -1px;
-    margin-right: rem(8px);
+    margin-right: $spacing-3;
     background-color: $switch-background-color;
     border-radius: $switch-height / 2; 
 
     &::before {
       content: "";
+      z-index: 100;
       position: absolute;
       top: 0;
       left: 0;
       display: block;
-      width: $switch-height - rem(4px);
-      height: $switch-height - rem(4px);
-      margin: rem(2px);
+      width: $switch-indicator-size;
+      height: $switch-indicator-size;
+      margin: $spacing-1;
       background-color: $white;  
-      border-radius: 50%; 
+      border-radius: $switch-indicator-size / 2; 
     } 
   }
  
@@ -36,7 +42,16 @@
     background-color: $switch-background-color-active;
 
     &::before {
-      left: calc(100% - #{$switch-height});  
+      left: auto;
+      right: 0;
     }
+  }
+
+  &__control:focus ~ &__indicator::before {
+    box-shadow: 0 0 rem(4px) rem(8px) rgba($grey-500, 0.25);
+  }
+
+  &__control:checked:focus ~ &__indicator::before {
+    box-shadow: 0 0 rem(4px) rem(8px) rgba($primary, 0.25);
   }
 }
