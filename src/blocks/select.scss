@@ -3,26 +3,27 @@
   display: inline-block;
   cursor: pointer;
 
-  &::after {
-    content: "";
-    z-index: 30;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    width: $icon-size;
-    height: $icon-size;
-    margin: calc(#{$control-height - $icon-size} / 2);
-    background-image: svg-load("svg/arrow-down.svg", fill = $text-color);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    pointer-events: none;
-  }
-
   &__control {
     @include control;
     padding-right: $control-height;
+    background-image: svg-load("svg/arrow-down.svg", fill = $text-color);
+    background-position: calc(100% - #{$control-height - $icon-size} / 2) center;
+    background-size: $icon-size;
+    background-repeat: no-repeat;
     appearance: none;
     cursor: pointer;
+
+    &:hover {
+      @include control-hovered;
+    }
+
+    &:focus {
+      @include control-focused;
+    }
+
+    &:disabled {
+      @include control-disabled;
+      background-image: svg-load("svg/arrow-down.svg", fill = $text-color-muted);
+    }
   }
 }
