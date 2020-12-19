@@ -19,7 +19,7 @@ $font-size: rem(14px);
 $font-family: -apple-system, BlinkMacSystemFont, Roboto, Ubuntu, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 
 $border-width: 1px;
-$border-color: hsl(0, 0, 83%);
+$border-color: $grey-300;
 $border: $border-width solid $border-color;
 
 $border-radius: rem(3px);
@@ -29,6 +29,8 @@ $spacing-2: rem(4px);
 $spacing-3: rem(8px);
 $spacing-4: rem(12px);
 $spacing-5: rem(16px);
+
+$prefix: mo-;
 
 $control-z-index-hovered: 20;
 $control-z-index-focused: 30;

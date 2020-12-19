@@ -1,4 +1,4 @@
-.tabs {
+.#{$prefix}tabs {
 
   &__tab-group {
     display: flex;
@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: rem(40px);
-    padding: $control-padding-v $control-padding-h;
+    padding: $control-padding-y $control-padding-x;
     color: $text-color;
     font-size: $font-size;
     font-family: $font-family;

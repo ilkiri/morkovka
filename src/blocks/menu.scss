@@ -1,4 +1,4 @@
-.menu {
+.#{$prefix}menu {
   min-width: 180px;
   padding: rem(8px) 0;
   margin-top: 0;
@@ -12,7 +12,7 @@
     align-items: center;
     width: 100%;
     height: $control-height;
-    padding: $control-padding-v $control-padding-h;
+    padding: $control-padding-y $control-padding-x;
     color: $text-color;
     font-size: $font-size;
     font-family: $font-family;
@@ -27,7 +27,7 @@
   }
 
   &__divider {
-    margin: $control-padding-h / 2;
+    margin: $control-padding-y / 2;
     border-top: $border;
   }
 }

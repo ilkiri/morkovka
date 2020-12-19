@@ -1,4 +1,4 @@
-.radio {
+.#{$prefix}radio {
   @include checkbox-radio;
 
   &__indicator {

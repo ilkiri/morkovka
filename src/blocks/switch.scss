@@ -1,4 +1,4 @@
-.switch {
+.#{$prefix}switch {
   display: inline-flex;
   align-items: center;
   line-height: $switch-height;

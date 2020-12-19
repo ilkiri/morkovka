@@ -1,4 +1,4 @@
-.input {
+.#{$prefix}input {
   position: relative;
   display: block;
   flex: 1;
@@ -36,7 +36,7 @@
   &--has-leading-icon,
   &--has-trailing-icon {
 
-    .icon {
+    .#{$prefix}icon {
       z-index: 100;
       position: absolute;
       top: 0;
@@ -44,11 +44,11 @@
     }
   }
 
-  &--has-leading-icon .icon {
+  &--has-leading-icon .#{$prefix}icon {
     left: $border-width;
   }
 
-  &--has-trailing-icon .icon {
+  &--has-trailing-icon .#{$prefix}icon {
     right: $border-width;
   }
 
@@ -63,7 +63,7 @@
   &--small#{&}--has-leading-icon,
   &--small#{&}--has-trailing-icon {
 
-    .icon {
+    .#{$prefix}icon {
       margin: calc(#{$control-height-sm - $icon-size} / 2); 
     }
   }

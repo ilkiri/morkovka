@@ -1,4 +1,4 @@
-.button {
+.#{$prefix}button {
   @include control;
   display: inline-flex;
   justify-content: center;
@@ -42,12 +42,12 @@
     padding: $control-padding-y;
   }
 
-  &--has-leading-icon .icon {
+  &--has-leading-icon .#{$prefix}icon {
     margin-right: $control-padding-x * 2 / 3;
     margin-left: -$control-padding-x / 3; 
   } 
 
-  &--has-trailing-icon .icon { 
+  &--has-trailing-icon .#{$prefix}icon { 
     margin-right: -$control-padding-x / 3; 
     margin-left: $control-padding-x * 2 / 3;
   }
@@ -56,12 +56,12 @@
     width: $control-height-sm;
   }
 
-  &--small#{&}--has-leading-icon .icon {
+  &--small#{&}--has-leading-icon .#{$prefix}icon {
     margin-right: $control-padding-x-sm * 2 / 3; 
     margin-left: -$control-padding-x-sm / 3;
   }
 
-  &--small#{&}--has-trailing-icon .icon {
+  &--small#{&}--has-trailing-icon .#{$prefix}icon {
     margin-right: -$control-padding-x-sm / 3;
     margin-left: $control-padding-x-sm * 2 / 3;
   }

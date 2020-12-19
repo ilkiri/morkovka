@@ -1,28 +1,28 @@
-.control-group {
+.#{$prefix}control-group {
   display: flex;
 
-  > .button:not(:first-child),
-  > .text-input:not(:first-child),
-  > .select:not(:first-child),
-  > .checkbox.checkbox--as-button:not(:first-child),
-  > .radio.radio--as-button:not(:first-child) {
+  > .#{$prefix}button:not(:first-child),
+  > .#{$prefix}input:not(:first-child),
+  > .#{$prefix}select:not(:first-child),
+  > .#{$prefix}checkbox.#{$prefix}checkbox--as-button:not(:first-child),
+  > .#{$prefix}radio.#{$prefix}radio--as-button:not(:first-child) {
     margin-left: -$border-width;
   }
 
-  > .button:not(:first-child),
-  > .text-input:not(:first-child) .text-input__control,
-  > .select:not(:first-child) .select__control,
-  > .checkbox.checkbox--as-button:not(:first-child) .button,
-  > .radio.radio--as-button:not(:first-child) .button {
+  > .#{$prefix}button:not(:first-child),
+  > .#{$prefix}input:not(:first-child) .#{$prefix}input__control,
+  > .#{$prefix}select:not(:first-child) .#{$prefix}select__control,
+  > .#{$prefix}checkbox.#{$prefix}checkbox--as-button:not(:first-child) .#{$prefix}button,
+  > .#{$prefix}radio.#{$prefix}radio--as-button:not(:first-child) .#{$prefix}button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  > .button:not(:last-child),
-  > .text-input:not(:last-child) .text-input__control,
-  > .select:not(:last-child) .select__control,
-  > .checkbox.checkbox--as-button:not(:last-child) .button,
-  > .radio.radio--as-button:not(:last-child) .button {
+  > .#{$prefix}button:not(:last-child),
+  > .#{$prefix}input:not(:last-child) .#{$prefix}input__control,
+  > .#{$prefix}select:not(:last-child) .#{$prefix}select__control,
+  > .#{$prefix}checkbox.#{$prefix}checkbox--as-button:not(:last-child) .#{$prefix}button,
+  > .#{$prefix}radio.#{$prefix}radio--as-button:not(:last-child) .#{$prefix}button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
