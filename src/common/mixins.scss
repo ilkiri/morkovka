@@ -76,26 +76,30 @@
   &__control:focus ~ &__indicator {
     @include control-focused;
   }
-
-  &__control:checked ~ &__indicator {
+  
+  &__control:checked:not(:disabled) ~ &__indicator {
     background-color: $checkbox-radio-background-color-active;
     border-color: transparent;
   }
 
-  &__control:checked:hover ~ &__indicator,
+  &__control:checked:not(:disabled):hover ~ &__indicator,
   &__control:checked:focus ~ &__indicator {
     background-color: lighten($checkbox-radio-background-color-active, 5%);
   }
 
-  &--as-button &__control:focus ~ .button {
+  &__control:disabled ~ &__indicator {
+    background-color: $grey-200;
+  }
+
+  &--as-button &__control:focus ~ .#{$prefix}button {
     @include control-focused;
   }
 
-  &--as-button &__control:checked ~ .button {
+  &--as-button &__control:checked ~ .#{$prefix}button {
     background-color: rgba($primary, 0.125);
   }
 
-  &--as-button &__control:disabled ~ .button {
+  &--as-button &__control:disabled ~ .#{$prefix}button {
     @include control-disabled; 
   }
 }
