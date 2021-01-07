@@ -1,29 +1,23 @@
 .#{$prefix}select {
-  position: relative;
-  display: inline-block;
+  @include control;
+  padding-right: $control-height;
+  background-image: svg-load("svg/arrow-down.svg", fill = $text-color);
+  background-position: calc(100% - #{$control-height - $icon-size} / 2) center;
+  background-size: $icon-size;
+  background-repeat: no-repeat;
+  appearance: none;
   cursor: pointer;
 
-  &__control {
-    @include control;
-    padding-right: $control-height;
-    background-image: svg-load("svg/arrow-down.svg", fill = $text-color);
-    background-position: calc(100% - #{$control-height - $icon-size} / 2) center;
-    background-size: $icon-size;
-    background-repeat: no-repeat;
-    appearance: none;
-    cursor: pointer;
+  &:hover {
+    @include control-hovered;
+  }
 
-    &:hover {
-      @include control-hovered;
-    }
+  &:focus {
+    @include control-focused;
+  }
 
-    &:focus {
-      @include control-focused;
-    }
-
-    &:disabled {
-      @include control-disabled;
-      background-image: svg-load("svg/arrow-down.svg", fill = $text-color-muted);
-    }
+  &:disabled {
+    @include control-disabled;
+    background-image: svg-load("svg/arrow-down.svg", fill = $text-color-muted);
   }
 }
